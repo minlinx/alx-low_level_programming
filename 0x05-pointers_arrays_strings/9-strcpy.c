@@ -1,31 +1,19 @@
 #include "main.h"
-
 /**
- * _strlen - returns the length of a string
- * @s: string
- * Return: length
+ * _strcpy - copies a strings
+ * @src: the string to copy
+ * @dest: the destination
+ * Return: the pointer to dest
  */
-
-int _strlen(char *s)
-{
-	int len = 0;
-
-	while (*s != '\0')
-	{
-		len++;
-		s++;
-	}
-
-	return (len);
-}
-
 
 char *_strcpy(char *dest, char *src)
 {
 	int i;
 
-	for (i = 0; i <= _strlen(src); i++)
+	for (i = 0; src[i] != '\0'; i++)
+	{
 		dest[i] = src[i];
-
+	}
+	dest[i] = '\0';
 	return (dest);
 }
